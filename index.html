@@ -8,15 +8,17 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Custom styles for dark theme and Kali Linux theme -->
+    <!-- Custom styles for space theme and Kalilinux entertainment -->
     <style>
         body {
-            background-color: #000;
+            background: url('https://source.unsplash.com/1920x1080/?space') no-repeat fixed center;
+            background-size: cover;
             color: #fff;
+            overflow: hidden;
         }
 
         .navbar {
-            background-color: #343a40;
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .navbar-brand, .navbar-nav .nav-link {
@@ -28,15 +30,17 @@
         }
 
         .container-fluid {
-            background-color: #343a40;
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 70px 0;
+            text-align: center;
         }
 
         #about, #download, #contact {
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 70px 0;
+            text-align: center;
         }
 
         .btn-primary {
@@ -48,9 +52,25 @@
             background-color: #3a6470;
             border-color: #3a6470;
         }
+
+        /* Mouse-follow motion effect */
+        .mouse-cursor {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            border: 2px solid #5a8d99;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.2s ease-out;
+        }
     </style>
 </head>
 <body>
+
+<!-- Mouse-follow motion effect -->
+<div class="mouse-cursor"></div>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -85,6 +105,7 @@
         <div class="col-md-6 offset-md-3 text-center">
             <h2>About WHM</h2>
             <p>Your brand description goes here. Tell your visitors about the purpose and values of WHM.</p>
+            <p>About Kalilinux LXD Container: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
         </div>
     </div>
 </div>
@@ -105,7 +126,7 @@
         <div class="col-md-6 offset-md-3 text-center">
             <h2>Contact Us</h2>
             <p>Feel free to reach out to us for any inquiries or support.</p>
-            <h2 href="www.bit.ly/whm_info">WHM - WEB </h2>
+            <h2>www.bit.ly/whm_info</h2>
         </div>
     </div>
 </div>
@@ -114,6 +135,15 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript for mouse-follow motion effect -->
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const cursor = document.querySelector('.mouse-cursor');
+        cursor.style.top = e.clientY + 'px';
+        cursor.style.left = e.clientX + 'px';
+    });
+</script>
 
 </body>
 </html>
