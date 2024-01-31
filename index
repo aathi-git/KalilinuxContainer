@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Page</title>
+    <title>WHM - KalilinuxContainer</title>
     
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
-<div class="container mt-5">
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">WHM</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#download">Download</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container-fluid bg-primary text-white text-center py-5">
+    <h1 class="display-4">Welcome to WHM</h1>
+    <p class="lead">Everything is Easy....</p>
+</div>
+
+<!-- About Section -->
+<div class="container mt-5" id="about">
     <div class="row">
         <div class="col-md-6 offset-md-3 text-center">
-            <h1>Download Your Script</h1>
-            
-            <!-- Replace the link with your actual download link -->
-            <a href="https://github.com/yourusername/yourrepository/releases/download/v1.0/yourscript.sh" class="btn btn-primary btn-lg" download>Download Script</a>
+            <h2>About WHM</h2>
+            <p>Your brand description goes here. Tell your visitors about the purpose and values of WHM.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Download Section -->
+<div class="container mt-5" id="download">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h2>Download</h2>
+            <a href="https://github.com/aathi-git/KalilinuxContainer/releases/download/1.0/create_kali_container.sh" class="btn btn-primary btn-lg" download>Download Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container mt-5" id="contact">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries or support.</p>
+            <h2>www.bit.ly/whm_info</h2>
         </div>
     </div>
 </div>
